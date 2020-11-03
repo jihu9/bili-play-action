@@ -1,10 +1,10 @@
-#每天9:30&21:30执行(东八区1+8=9  13+8=21)
+#每20分钟执行
 name: bili play
 
 on:
    gollum:
    schedule:
-       - cron: '0 0/30 * * *'
+       - cron: '*/20 * * *'
 
 jobs:
   start:
@@ -27,4 +27,4 @@ jobs:
         chmod +x chromedriver
         sudo mv chromedriver /usr/bin/
         pip install -r requirement.txt
-        python bv.py
+        python main.py
