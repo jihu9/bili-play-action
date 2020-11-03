@@ -1,5 +1,5 @@
 <div align="center"> 
-<h1 align="center">Bilibili助手</h1>
+<h1 align="center">Bilibili播放量助手</h1>
 </div>
 
 # 简介
