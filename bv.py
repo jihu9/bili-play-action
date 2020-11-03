@@ -21,6 +21,7 @@ def bil_views():
 	print('X-Forwarded-For:'+ip)
 	option=ChromeOptions()
 	option.add_argument('--headless')#不启动图形浏览器
+	option.add_argument('--no-sandbox')
 	option.add_argument('disable-infobars')
 	option.add_argument('user-agent='+ua)
 	option.add_argument('--window-size=540,960')
