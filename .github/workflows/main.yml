@@ -1,0 +1,30 @@
+#每天9:30&21:30执行(东八区1+8=9  13+8=21)
+name: bili play
+
+on:
+   gollum:
+   schedule:
+       - cron: '0 0/30 * * * ?'
+
+jobs:
+  start:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: run
+      run: |
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+        LATEST=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+        wget http://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
+        chmod +x chromedriver
+        sudo mv chromedriver /usr/bin/
+        pip install -r requirement.txt
+        python bv.py
