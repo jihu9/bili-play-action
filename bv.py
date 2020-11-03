@@ -4,15 +4,10 @@ import time
 import random
 import linecache
 from selenium.webdriver.common.action_chains import ActionChains
-from threading import Timer
 import os
 import sys
 import socket
-import _thread
-
-
-#随机身份
-
+import requests
 
 def bil_views():
 	num = random.randint(1,106)
@@ -64,8 +59,10 @@ def bil_views():
 	browser.quit() # 关闭浏览器
 
 n=1
-while n<50:
+while n<=50:
 	print('开始执行第： '+str(n)+'  次播放')
 	n=n+1
 	bil_views()
 	print('播放完毕，1~3秒后重启浏览器线程')
+
+requests.get('https://sc.ftqq.com/SCU121122T1cc8d68fe0566217f16362970e6a55875f98d59eab0e3.send?text=哔哩哔哩播放50次完毕')
