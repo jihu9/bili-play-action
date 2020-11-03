@@ -51,11 +51,7 @@ def bil_views():
 	#browser.close() # 关闭当前页面
 	browser.quit() # 关闭浏览器
 
-n=1
-while n<=50:
-	print('开始执行第： '+str(n)+'  次播放')
-	n=n+1
-	bil_views()
-	print('播放完毕，1~3秒后重启浏览器线程')
+bil_views()
+
 
 requests.get('https://sc.ftqq.com/SCU121122T1cc8d68fe0566217f16362970e6a55875f98d59eab0e3.send?text=哔哩哔哩播放50次完毕')
