@@ -22,17 +22,9 @@ def bil_views():
 	option=ChromeOptions()
 	option.add_argument('--headless')#不启动图形浏览器
 	option.add_argument('disable-infobars')
-	option.add_argument('disable-infobars')
 	option.add_argument('user-agent='+ua)
 	option.add_argument('--window-size=540,960')
-	option.add_argument('wup_version=3.0')
 	option.add_argument('X-Forwarded-For='+ip)
-	option.add_argument('sdkVer=3.1.0')
-	option.add_argument('bundleId=tv.danmaku.bili')
-	option.add_argument('proId=900028525')
-	option.add_argument('A37=WIFI')
-	option.add_argument('A38=WIFI')
-	option.add_argument("--mute-audio")
 	option.add_experimental_option('excludeSwitches', ['enable-automation'])#防检测
 	option.add_experimental_option('useAutomationExtension', False)#防检测
 	
