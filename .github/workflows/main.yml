@@ -4,7 +4,7 @@ name: bili play
 on:
    gollum:
    schedule:
-       - cron: '*/6 * * * *'
+       - cron: '*/1 * * * *'
 
 jobs:
   start:
