@@ -16,7 +16,11 @@ def bil_views():
 	num = random.randint(1,24)
 	url = str(linecache.getline('url.txt', num))
 	print('url:',url)
-
+	with open('url.txt', 'r') as x:
+		for line in x:
+			url = line.replace('\n', '')
+			play(ua,url)
+def play(ua,url):
 	ip = str(random.randint(1,255))+'.'+str(random.randint(1,255))+'.'+str(random.randint(1,255))+'.'+str(random.randint(1,255))
 	print('X-Forwarded-For:'+ip)
 	option=ChromeOptions()
@@ -54,4 +58,4 @@ def bil_views():
 bil_views()
 
 
-requests.get('https://sc.ftqq.com/SCU121122T1cc8d68fe0566217f16362970e6a55875f98d59eab0e3.send?text=哔哩哔哩播放50次完毕')
+#requests.get('https://sc.ftqq.com/SCU121122T1cc8d68fe0566217f16362970e6a55875f98d59eab0e3.send?text=哔哩哔哩播放50次完毕')
