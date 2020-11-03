@@ -21,7 +21,7 @@ def bil_views():
 	url = str(linecache.getline('url.txt', num))
 	print('url:',url)
 	'''
-	with open('keyword.txt', 'r') as x:
+	with open('url.txt', 'r') as x:
 		for line in x:
 			url = line.replace('\n', '')
 			play(ua,url)
