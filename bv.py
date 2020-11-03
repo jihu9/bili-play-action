@@ -10,11 +10,17 @@ import socket
 import requests
 
 def bil_views():
-	num = random.randint(1,106)
+	#随机行
+	num = random.randint(1,len(open(r"ua.txt",'rU').readlines()))
+	print(str(num))
 	ua = str(linecache.getline('ua.txt', num))
 	print('user-agent:',ua)
-	num = random.randint(1,22)
+	'''
+	num = random.randint(1,len(open(r"url.txt",'rU').readlines()))
+	print(str(num))
 	url = str(linecache.getline('url.txt', num))
+	print('url:',url)
+	'''
 	with open('keyword.txt', 'r') as x:
 		for line in x:
 			url = line.replace('\n', '')
@@ -57,4 +63,4 @@ def play(ua,url):
 bil_views()
 
 
-#requests.get('https://sc.ftqq.com/SCU121122T1cc8d68fe0566217f16362970e6a55875f98d59eab0e3.send?text=哔哩哔哩播放50次完毕')
+#requests.get('https://sc.ftqq.com/你的server酱SCKEY.send?text=哔哩哔哩播放50次完毕')
