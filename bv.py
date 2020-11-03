@@ -15,12 +15,6 @@ def bil_views():
 	print('user-agent:',ua)
 	num = random.randint(1,24)
 	url = str(linecache.getline('url.txt', num))
-	print('url:',url)
-	with open('url.txt', 'r') as x:
-		for line in x:
-			url = line.replace('\n', '')
-			play(ua,url)
-def play(ua,url):
 	ip = str(random.randint(1,255))+'.'+str(random.randint(1,255))+'.'+str(random.randint(1,255))+'.'+str(random.randint(1,255))
 	print('X-Forwarded-For:'+ip)
 	option=ChromeOptions()
