@@ -19,7 +19,6 @@ jobs:
         python-version: 3.7
     - name: Install requirements
       run: |
-        pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
         python -m pip install --upgrade pip
         pip install -r requirement.txt
     - name: Install ChromeDriver
@@ -36,4 +35,4 @@ jobs:
     - name: run
       run: |
         pip install -r requirement.txt
-        python main.py
+        python bv.py
