@@ -12,16 +12,16 @@ import _thread
 
 
 #随机身份
-def random_1():
+
+
+def bil_views():
 	num = random.randint(1,106)
 	ua = str(linecache.getline('ua.txt', num))
 	print('user-agent:',ua)
 	num = random.randint(1,24)
 	url = str(linecache.getline('url.txt', num))
 	print('url:',url)
-	bil_views(ua,url)
 
-def bil_views(ua,url):
 	ip = str(random.randint(1,255))+'.'+str(random.randint(1,255))+'.'+str(random.randint(1,255))+'.'+str(random.randint(1,255))
 	print('X-Forwarded-For:'+ip)
 	option=ChromeOptions()
@@ -62,10 +62,10 @@ def bil_views(ua,url):
 	#退出
 	#browser.close() # 关闭当前页面
 	browser.quit() # 关闭浏览器
-	
 
 n=1
-print('开始执行第： '+str(n)+'  次播放')
-n=n+1
-random_1()
-print('播放完毕，1~3秒后重启浏览器线程')
+while n<50:
+	print('开始执行第： '+str(n)+'  次播放')
+	n=n+1
+	bil_views()
+	print('播放完毕，1~3秒后重启浏览器线程')
