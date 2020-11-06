@@ -55,7 +55,7 @@ def play(ua,url):
 	time.sleep(5)
 	ActionChains(browser).move_by_offset(260, 210).click().perform()
 	print('播放成功')
-	time.sleep(31)
+	time.sleep(random.randint(30,75))
 	#退出
 	#browser.close() # 关闭当前页面
 	browser.quit() # 关闭浏览器
