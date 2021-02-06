@@ -2,7 +2,7 @@
 <h1 align="center">Bilibili播放量助手</h1>
 </div>
 
-# 简介
+# 简介 
 
 哔哩哔哩(B站)自动播放视频，
 
